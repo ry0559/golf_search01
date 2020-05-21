@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - "./postgresql-data:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+
+
+  web:               
+    build: .    
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:         
+      - ".:/golf_search01"
+    ports:           
+      - "3000:3000"
+    tty: true
+    depends_on: 
+      - db        

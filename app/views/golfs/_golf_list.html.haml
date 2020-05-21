@@ -1,0 +1,9 @@
+- if @items.present?
+  - @items.each do |i|
+    .list
+      %ul
+        %li
+          = i.golf_course_name
+          = link_to "コースレイアウト", "https://booking.gora.golf.rakuten.co.jp/guide/layout_disp/c_id/#{i['golfCourseId']}"
+          = link_to "天気予報", "https://booking.gora.golf.rakuten.co.jp/weather/disp/c_id/#{i['golfCourseId']}"
+          -# = link_to "", "https://booking.gora.golf.rakuten.co.jp/guide/layout_disp/c_id/#{i['golfCourseId']}"

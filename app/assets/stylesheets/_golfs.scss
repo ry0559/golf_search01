@@ -1,0 +1,64 @@
+@media screen and (max-width:767px){
+  
+  .keyword-form {
+    width: 70%;
+    height: 46px;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  .course {
+    border-radius: 6px;
+    border: solid 1px gainsboro;
+    margin-bottom: 5px;
+    padding: 5px;
+    .thumbnail {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width:991px){
+
+  .jumbotron {
+    .keyword-form {
+      width: 70%;
+      height: 46px;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+  }
+  
+  
+  .course-list { 
+    .course {
+      border-radius: 6px;
+      border: solid 1px gainsboro;
+      margin-bottom: 5px;
+      padding: 10px;
+      .course-detail {
+        display: flex;
+        
+        .course-detail-image {
+          .thumbnail {
+
+            height: 100%;
+            width: 200px;
+          }
+        }
+
+        .course-detail-text {
+          padding: 10px;
+          .course-detail-text-link {
+            margin-top: 80px;
+            
+            .btn {
+              margin-right: 10px;
+            }
+          }
+
+        }
+      }   
+    }
+  }
+}

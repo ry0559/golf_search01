@@ -1,14 +1,12 @@
-%nav.navbar.navbar-light.bg-light
-  %a.navbar-brand{:href => "#"} Course search
-
 
 .jumbotron
-  .content
-    #search-box
-
+  .container
+    %h1.display-4
+      Golf course
+    .form-group
       = form_tag('/', method: :get) do
-        = text_field_tag :good, "", class:"form-control form-control-lg", name: "keyword", placeholder: "キーワードを打ち込んでください", style: "width: 200px;"
-        %button{:title => "検索", :type => "submit"} 検索
-    %h2 Golf course
-    #good_list
-      = render partial: 'golfs/golf_list'
+        = text_field_tag :good, "", type:"text", class:"form-control-fluid keyword-form", name: "keyword", placeholder: "キーワードを入力"
+        %button.btn.btn-primary.btn-lg.search-btn{title: "検索", type: "submit"} 検索
+.course-list
+  = render partial: 'golfs/golf_list'
+

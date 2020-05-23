@@ -1,4 +1,10 @@
 .container
+  - if flash.now[:alert]
+    %p.notice-message
+      = render 'layouts/notifications'
+
+
+
   - if @items.present?
     - @items.each do |i|
       .course
@@ -16,7 +22,14 @@
             .course-detail-text-link
               = link_to "コースレイアウト", "https://booking.gora.golf.rakuten.co.jp/guide/layout_disp/c_id/#{i['golfCourseId']}", class: "btn btn-primary"
               = link_to "天気予報", "https://booking.gora.golf.rakuten.co.jp/weather/disp/c_id/#{i['golfCourseId']}", class: "btn btn-primary"
-
+  - else
+    .explanation
+      %h3
+        キーワードからゴルフコース検索します。
+      %p
+        コース名、都道府県、など
+    
+    
 
 
               

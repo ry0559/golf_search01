@@ -1,0 +1,24 @@
+.error {
+  color: red;
+}
+.notice-message {
+  color: green;
+  text-align: left;
+}
+.flash-error-message {
+  color: red;
+  text-align: left;
+}
+.notification {
+  
+  .notice {
+    background-color: blue;
+    color:red;
+    text-align: center;
+  }
+
+  .alert {
+    color: red;
+    
+  }
+}
